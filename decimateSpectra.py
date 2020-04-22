@@ -2,8 +2,6 @@ import numpy
 import glob, os
 from scipy import interpolate
 
-
-
 def decimateSpec(rawPSDLocation):
     rawPSDList = []
     os.chdir(rawPSDLocation)
@@ -32,4 +30,5 @@ def decimateSpec(rawPSDLocation):
         numpy.savetxt('decim_psd/decim_%s' %rawPSD, psd)
     return
 
-decimateSpec('raw_psds')
+# Input folder with raw psds
+#decimateSpec('raw_psds')
